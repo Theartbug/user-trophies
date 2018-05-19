@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './trophy.css';
 
 export default class Categories extends PureComponent {
 
@@ -7,8 +8,10 @@ export default class Categories extends PureComponent {
     const { emoji, instructions, description } = this.props.trophy;
 
     return (
-      <li>
-        <pre>{emoji}</pre>
+      <li className="trophy">
+        <span>
+          <p>{emoji}</p>
+        </span>
         <p>{instructions}</p>
         <p>{description}</p>
       </li>
