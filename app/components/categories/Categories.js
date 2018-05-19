@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import trophies from '../../services/trophies.json';
+import Category from './Category';
 
-export default class Trophies extends PureComponent {
+export default class Categories extends PureComponent {
 
   parseCategories = (contentArr) => {
     return contentArr.filter(obj => obj.type === 'category').map(obj => { 
-      return { [obj.name]: this.parseTrophies(obj.content) }; 
+      return { 'name': obj.name, 'trophies': this.parseTrophies(obj.content) }; 
     });
 
   };
@@ -28,13 +29,12 @@ export default class Trophies extends PureComponent {
 
     const { content } = trophies;
     const { parseCategories } = this;
-
     const parsed = parseCategories(content);
-    console.log(parsed);
 
     return (
-      <div>
-      </div>
+      <ul>
+        {parsed.map(category => <Category key={category.name} category={category}/>)}
+      </ul>
     );
   }
 }
