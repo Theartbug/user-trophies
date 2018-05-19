@@ -32,7 +32,7 @@ export default class Categories extends PureComponent {
     const parsed = parseCategories(content);
 
     return (
-      <ul>
+      <ul className="categories">
         {parsed.map(category => <Category key={category.name} category={category}/>)}
       </ul>
     );
