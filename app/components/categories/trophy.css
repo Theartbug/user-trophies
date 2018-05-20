@@ -1,14 +1,27 @@
 @import '../../styles/variables.css';
 .trophy {
   span {
-    background-color: $black;
+    background: linear-gradient($black, $grey);
     display: inline-block;
     border-radius: .3rem;
     height: 80px;
     width: 80px;
     position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(rgba(255, 255, 255, 0.801), rgba(255, 255, 255, 0.2));
+      left: 2px;
+      top: 2px;
+      width: calc(100% - 4px);
+      height: 50%;
+      border-radius: .2rem .2rem 0 0;
+      
+    }
     
     p {
+      /* z-index: 100; */
       font-size: 3rem;
       margin-bottom: 0;
       position: absolute;
