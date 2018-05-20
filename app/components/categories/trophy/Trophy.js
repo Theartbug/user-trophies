@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 import './trophy.css';
 
 export default class Trophy extends PureComponent {

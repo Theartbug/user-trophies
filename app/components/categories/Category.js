@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Trophy from './Trophy';
+import Trophy from './trophy/Trophy';
 import Chevron from 'react-icons/lib/md/chevron-right'
 import './category.css';
 
@@ -30,7 +30,11 @@ export default class Categories extends PureComponent {
       <li className="category">
         <div className="header">
           <h1>{name}</h1>
-          <button type="button" onClick={changeVisible}>See All <Chevron className={`${open ? 'active' : ''}`}/></button>
+          {open 
+            ? <button type="button" onClick={changeVisible}>See Less <Chevron className={`${open ? 'active' : ''}`}/></button>
+            : <button type="button" onClick={changeVisible}>See More<Chevron className={`${open ? 'active' : ''}`}/></button>
+          }
+          
         </div>
         <ul className="trophies">
           {open ?
