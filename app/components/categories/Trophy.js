@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import Modal from './modal/Modal';
 import './trophy.css';
 
-export default class Categories extends PureComponent {
+export default class Trophy extends PureComponent {
 
   state = {
     open: false
@@ -15,7 +15,7 @@ export default class Categories extends PureComponent {
 
   render() {
 
-    const { emoji, instructions, description } = this.props.trophy;
+    const { emoji, instructions, description, earned } = this.props.trophy;
     const { open } = this.state;
 
     return (
@@ -24,7 +24,7 @@ export default class Categories extends PureComponent {
           <p>{emoji}</p>
         </span>
         <p>{description}</p>
-        <Modal emoji={emoji} instructions={instructions} handleModal={this.handleModal} open={open}/>
+        <Modal emoji={emoji} instructions={instructions} earned={earned} handleModal={this.handleModal} open={open}/>
       </li>
     );
   }

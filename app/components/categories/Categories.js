@@ -17,7 +17,8 @@ export default class Categories extends PureComponent {
       filteredArr.push({ 
         'emoji': arr[i].emoji,
         'instructions':arr[i].instructions,
-        'description': arr[i].description
+        'description': arr[i].description,
+        'earned': arr[i].lastEarned
       }); 
     }
 
