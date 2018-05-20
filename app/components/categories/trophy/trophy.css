@@ -1,6 +1,9 @@
 @import '../../../styles/variables.css';
 .trophy {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   span {
     background: linear-gradient($black, $grey);
     display: inline-block;

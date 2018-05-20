@@ -34,15 +34,14 @@ export default class Categories extends PureComponent {
             ? <button type="button" onClick={changeVisible}>See Less <Chevron className={`${open ? 'active' : ''}`}/></button>
             : <button type="button" onClick={changeVisible}>See More<Chevron className={`${open ? 'active' : ''}`}/></button>
           }
-          
         </div>
+        
         <ul className="trophies">
           {open ?
             visibleTrophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
             :
             visibleTrophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
           }
-
         </ul>
       </li>
     );
