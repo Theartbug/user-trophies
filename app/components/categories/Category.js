@@ -22,7 +22,7 @@ export default class Categories extends PureComponent {
     const { open } = this.state;
     //create a new array and shorten it. If did not create a new array, would point to the same place and edit the original array.
     const shortenedTrophies = trophies.slice();
-    shortenedTrophies.length = 5;
+    shortenedTrophies.length = 4;
 
     const visibleTrophies = open ? trophies : shortenedTrophies;
 
@@ -32,7 +32,7 @@ export default class Categories extends PureComponent {
           <h1>{name}</h1>
           <button type="button" onClick={changeVisible}>See All <Chevron className={`${open ? 'active' : ''}`}/></button>
         </div>
-        <ul>
+        <ul className="trophies">
           {open ?
             visibleTrophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
             :
