@@ -2,17 +2,17 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
-const path = `${__dirname}/build`;
+const path = `${__dirname}/docs`;
 
 module.exports = {
   entry: './app/main.js',
   output: {
     path,
     filename: 'bundle.[hash].js',
-    publicPath: '/'
+    publicPath: ''
   },
   devServer: {
-    contentBase: './build',
+    contentBase: './docs',
     historyApiFallback: true
   },
   devtool: 'inline-source-map',
