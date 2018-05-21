@@ -5,6 +5,7 @@
   box-shadow: 0 2px 1px hsla(0, 0%, 16%, .4), 0 0 0 1px hsla(0,0%,9%,0.2);
   border-radius: 10px;
   padding: 1rem;
+  min-width: 320px;
 
   .header {
     display: flex;
@@ -18,12 +19,13 @@
   }
 
   h1 {
-    font-size: 1.1em;
+    font-size: .7em;
     margin-bottom: 0;
   }
 
   button {
     white-space: nowrap;
+    font-size: .6em;
 
     svg {
       font-size: 1.5rem;
@@ -38,7 +40,7 @@
 
   .trophies {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: .5rem;
   }
 }

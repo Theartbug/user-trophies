@@ -4,8 +4,8 @@ $grey: #787777;
 
 /* RESPONSIVE TYPOGRAPHY VALUES, SPECIFY WITHOUT PX
    https://www.smashingmagazine.com/2016/05/fluid-typography/ */
-$minFontVal: 14;
-$maxFontVal: 18;
+$minFontVal: 24;
+$maxFontVal: 30;
 $minViewportVal: 480;
 $maxViewportVal: 1300;
 

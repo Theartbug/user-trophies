@@ -4,12 +4,20 @@
   flex-direction: column;
   align-items: center;
 
+  .image-container {
+    width: 100%;
+    max-height: 100px;
+    max-width: 100px;
+  }
+
   span {
     background: linear-gradient($black, $grey);
     display: inline-block;
     border-radius: .3rem;
-    height: 60px;
-    width: 60px;
+    width: 100%;
+    padding-top: 100%;
+    min-height: 60px;
+    min-width: 60px;
     position: relative;
 
     &:after {
@@ -25,7 +33,7 @@
     }
     
     p {
-      font-size: 2.3rem;
+      font-size: 2.3em;
       margin-bottom: 0;
       position: absolute;
       left: 50%;
@@ -39,5 +47,6 @@
     text-align: center;
     font-weight: 700;
     margin-bottom: 0;
+    font-size: .5em;
   }
 }

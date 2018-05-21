@@ -20,9 +20,11 @@ export default class Trophy extends PureComponent {
 
     return (
       <li className="trophy" onClick={this.handleModal}>
-        <span>
-          <p>{emoji}</p>
-        </span>
+        <div className="image-container">
+          <span>
+            <p>{emoji}</p>
+          </span>
+        </div>
         <p>{description}</p>
         <Modal emoji={emoji} instructions={instructions} earned={earned} handleModal={this.handleModal} open={open}/>
       </li>
