@@ -14,9 +14,6 @@ export default class Categories extends PureComponent {
     this.setState({ open: !open });
   };
 
-  calculateLength = () => {
-
-  };
 
   render() {
 
@@ -24,11 +21,11 @@ export default class Categories extends PureComponent {
     const { changeVisible } = this;
     const { open } = this.state;
     //create a new array and shorten it. If did not create a new array, would point to the same place and edit the original array.
-    const shortenedTrophies = trophies.slice();
+    // const shortenedTrophies = trophies.slice();
     // const length = calculateLength();
-    shortenedTrophies.length = 4;
+    // shortenedTrophies.length = 4;
 
-    const visibleTrophies = open ? trophies : shortenedTrophies;
+    // const visibleTrophies = open ? trophies : shortenedTrophies;
 
     return (
       <li className="category">
@@ -42,9 +39,9 @@ export default class Categories extends PureComponent {
         
         <ul className="trophies">
           {open ?
-            visibleTrophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
+            trophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
             :
-            visibleTrophies.map((trophy, i) => <Trophy key={i} trophy={trophy}/>)
+            trophies.map((trophy, i) => <Trophy key={i} trophy={trophy} classData={'short-li'}/>)
           }
         </ul>
       </li>

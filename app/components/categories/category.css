@@ -42,5 +42,63 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: .5rem;
+
+    .short-li:nth-child(n+5) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .category {
+    .trophies {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+      /* must reset previous nth child rule */
+      .short-li:nth-child(n+5) {
+        display: flex;
+      }
+      
+      /* then set the new one */
+      .short-li:nth-child(n+6) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .category {
+    .trophies {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      /* must reset previous nth child rule */
+      .short-li:nth-child(n+6) {
+        display: flex;
+      }
+
+      /* then set the new one */
+      .short-li:nth-child(n+7) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .category {
+    .trophies {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      /* must reset previous nth child rule */
+      .short-li:nth-child(n+7) {
+        display: flex;
+      }
+
+      /* then set the new one */
+      .short-li:nth-child(n+8) {
+        display: none;
+      }
+    }
   }
 }

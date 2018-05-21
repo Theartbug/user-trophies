@@ -15,11 +15,12 @@ export default class Trophy extends PureComponent {
 
   render() {
 
-    const { emoji, instructions, description, earned } = this.props.trophy;
+    const { classData, trophy } = this.props;
+    const { emoji, instructions, description, earned } = trophy;
     const { open } = this.state;
 
     return (
-      <li className="trophy" onClick={this.handleModal}>
+      <li className={`trophy ${classData}`} onClick={this.handleModal}>
         <div className="image-container">
           <span>
             <p>{emoji}</p>
