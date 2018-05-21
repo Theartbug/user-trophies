@@ -3,6 +3,8 @@ Objective
 
 Create a page that displays user trophies. Created using weback and react.
 
+The exercise is live here: https://theartbug.github.io/user-trophies/
+
 Steps Taken
 ===
 
