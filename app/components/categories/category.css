@@ -102,3 +102,21 @@
     }
   }
 }
+
+@media (min-width: 1150px) {
+  .category {
+    .trophies {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      /* must reset previous nth child rule */
+      .short-li:nth-child(n+8) {
+        display: flex;
+      }
+
+      /* then set the new one */
+      .short-li:nth-child(n+9) {
+        display: none;
+      }
+    }
+  }
+}

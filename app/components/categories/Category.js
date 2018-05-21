@@ -20,12 +20,6 @@ export default class Categories extends PureComponent {
     const { name, trophies } = this.props.category;
     const { changeVisible } = this;
     const { open } = this.state;
-    //create a new array and shorten it. If did not create a new array, would point to the same place and edit the original array.
-    // const shortenedTrophies = trophies.slice();
-    // const length = calculateLength();
-    // shortenedTrophies.length = 4;
-
-    // const visibleTrophies = open ? trophies : shortenedTrophies;
 
     return (
       <li className="category">

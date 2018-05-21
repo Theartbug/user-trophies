@@ -1,18 +1,10 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import Delete from 'react-icons/lib/ti/delete';
 import './modal.css';
 
 export default class Modal extends PureComponent {
 
-  static propTypes = {
-    open: PropTypes.bool.isRequired,
-    handleModal: PropTypes.func.isRequired,
-    instructions: PropTypes.string,
-    emoji: PropTypes.string
-
-  };
 
   UNSAFE_componentWillMount() {
     ReactModal.setAppElement('body'); //required for react-modal, helps hide content on the body from screen readers.
