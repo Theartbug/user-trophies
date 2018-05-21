@@ -5,7 +5,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const path = `${__dirname}/build`;
 
 module.exports = {
-  entry: './app/main.js',
+  entry: './main.js',
   output: {
     path,
     filename: 'bundle.[hash].js',
@@ -18,7 +18,7 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(`${path}/bundle.*.js`),
-    new HtmlPlugin({ template: './app/index.html' }),
+    new HtmlPlugin({ template: './index.html' }),
   ],
   module: {
     rules: [
